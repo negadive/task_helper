@@ -1,0 +1,2 @@
+class StoryNotFound(ValueError):
+    pass
