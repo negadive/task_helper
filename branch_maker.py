@@ -18,8 +18,8 @@ def _sanitize_branch_name(string: str) -> str:
         str: Valid branch name
     """
     string = string.lower()
-    string = re.sub(r"[\[\]]", "", string)
-    string = re.sub(r"\s|:+", "-", string)
+    string = re.sub(r"[\[\]\'\"]", "", string)
+    string = re.sub(r"\s+|:+|_+|=+", "-", string)
 
     return string
 
