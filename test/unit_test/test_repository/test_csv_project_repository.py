@@ -1,7 +1,6 @@
 import pandas as pd
 import pytest
-
-from pivotal_tracker.project import Project
+from model.project import Project
 from repository.project_repository.csv_project_repository import (
     CSVProjectRepository,
 )

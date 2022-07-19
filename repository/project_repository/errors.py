@@ -1,10 +1,14 @@
-class ProjectEmpty(Exception):
+class ProjectRepositoryError(Exception):
     ...
 
 
-class ProjectExist(Exception):
+class ProjectEmpty(ProjectRepositoryError):
     ...
 
 
-class ProjectNotFound(Exception):
+class ProjectExist(ProjectRepositoryError):
+    ...
+
+
+class ProjectNotFound(ProjectRepositoryError):
     ...

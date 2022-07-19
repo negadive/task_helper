@@ -1,6 +1,6 @@
 import pandas as pd
+from model.project import Project
 from pandas.errors import EmptyDataError
-from pivotal_tracker.project import Project
 
 from .errors import ProjectEmpty, ProjectExist, ProjectNotFound
 
