@@ -2,7 +2,6 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Story:
+class Project:
     id: str
-    title: str
-    type: str
+    name: str

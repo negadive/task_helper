@@ -1,4 +1,4 @@
-from pivotal_tracker.project import Project
+from model.project import Project
 from repository.project_repository.type import ProjectRepositoryP
 
 

@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from pivotal_tracker.project import Project
+from model.project import Project
 
 
 class ProjectRepositoryP(Protocol):
