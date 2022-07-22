@@ -2,13 +2,13 @@ import pandas as pd
 from model.project import Project
 from pandas.errors import EmptyDataError
 
-from .errors import ProjectEmpty, ProjectExist, ProjectNotFound
+from .errors import InvalidCSVPath, ProjectEmpty, ProjectExist, ProjectNotFound
 
 
 class CSVProjectRepository:
     def __init__(self, csv_path: str = "./projects.csv") -> None:
         if not csv_path:
-            raise Exception
+            raise InvalidCSVPath
         self._csv_path = csv_path
 
     def find(self, project_id: int) -> Project:
