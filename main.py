@@ -19,12 +19,11 @@ def main():
     @click.group()
     @click.pass_context
     def main_command(ctx: click.Context):
-        """
+        """Task helper, helps you with your tasks
         \f
-        Main cli
 
         Args:
-            ctx (click.Context): _description_
+            ctx (click.Context): Context for sub command
         """
         ctx.ensure_object(dict)
 
@@ -46,11 +45,12 @@ def main():
     @click.option("--project", default="")
     @click.pass_context
     def mkb(ctx: click.Context, story_id: str, project: str):
-        """Make branch cli
+        """Make branch
+        \f
 
         Args:
-            ctx (click.Context): _description_
-            story_id (str): _description_
+            ctx (click.Context): Command context
+            story_id (str): Story id
         """
         config: Config = ctx.obj["config"]
         project_id = project or config.PIVOTAL_TRACKER_PROJECT_ID
@@ -73,7 +73,15 @@ def main():
     @click.argument("project_id", required=True)
     @click.argument("name", required=True)
     @click.pass_context
-    def register_project(ctx: click.Context, project_id: str, name: str):
+    def register_project(ctx: click.Context, project_id: str, name: str) -> None:
+        """Register project for other commands
+        \f
+
+        Args:
+            ctx (click.Context): Command context
+            project_id (str): Project id
+            name (str): Project name
+        """
         project_service: ProjectService = ctx.obj["project_service"]
 
         try:
