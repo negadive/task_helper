@@ -30,12 +30,9 @@ def main():
         logger.debug(f"{config.__dict__=}")
         ctx.obj["config"] = config
 
-        project_service = ProjectService(
-            repo=CSVProjectRepository(
-                "/home/teguh.wijangkoro/playground/pt_helper/projects.csv"
-            )
+        ctx.obj["project_service"] = ProjectService(
+            repo=CSVProjectRepository(config.CSV_PROJECT_REPO_DIR)
         )
-        ctx.obj["project_service"] = project_service
 
         return
 
@@ -58,7 +55,7 @@ def main():
             task_repo=PivotalTaskRepository(
                 project_id, config.PIVOTAL_TRACKER_TOKEN
             ),
-            project_repo=CSVProjectRepository(config.CSV_PROJECT_REPO_DIR),
+            project_repo=ctx.obj["project_service"],
         )
         try:
             return pivotal_vcs_service.make_branch(story_id)
