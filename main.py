@@ -19,7 +19,9 @@ def main():
     @click.group()
     @click.pass_context
     def main_command(ctx: click.Context):
-        """Main cli
+        """
+        \f
+        Main cli
 
         Args:
             ctx (click.Context): _description_
