@@ -12,3 +12,7 @@ class ProjectExist(ProjectRepositoryError):
 
 class ProjectNotFound(ProjectRepositoryError):
     ...
+
+
+class InvalidCSVPath(ProjectRepositoryError):
+    ...

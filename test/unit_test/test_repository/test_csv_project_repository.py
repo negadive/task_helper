@@ -4,12 +4,19 @@ from model.project import Project
 from repository.project_repository.csv_project_repository import (
     CSVProjectRepository,
 )
+from repository.project_repository.errors import InvalidCSVPath
 
 PROJECT_PATH = "./test_projects.csv"
 
 
 def tear_down():
     open(PROJECT_PATH, "w").close()
+
+
+@pytest.mark.parametrize("csv_path", (None, ""))
+def test_initialize_invalid_path(csv_path):
+    with pytest.raises(InvalidCSVPath):
+        CSVProjectRepository(csv_path)
 
 
 @pytest.mark.parametrize(
