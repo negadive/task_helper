@@ -7,6 +7,8 @@ from .errors import ProjectEmpty, ProjectExist, ProjectNotFound
 
 class CSVProjectRepository:
     def __init__(self, csv_path: str = "./projects.csv") -> None:
+        if not csv_path:
+            raise Exception
         self._csv_path = csv_path
 
     def find(self, project_id: int) -> Project:

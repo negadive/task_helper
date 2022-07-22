@@ -12,6 +12,11 @@ def tear_down():
     open(PROJECT_PATH, "w").close()
 
 
+def test_initialize():
+    with pytest.raises(Exception):
+        CSVProjectRepository(None)
+
+
 @pytest.mark.parametrize(
     ("project_id", "project_name"),
     (
