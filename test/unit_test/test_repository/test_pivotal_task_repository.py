@@ -1,9 +1,10 @@
 import re
 
 import pytest
-from model.task.pivotal_task import PivotalTask
-from repository.task_repository.errors import TaskNotFound
-from repository.task_repository.pivotal_task_repository import (
+
+from task_helper.model.task.pivotal_task import PivotalTask
+from task_helper.repository.task_repository.errors import TaskNotFound
+from task_helper.repository.task_repository.pivotal_task_repository import (
     PivotalTaskRepository,
 )
 

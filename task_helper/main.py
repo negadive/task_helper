@@ -1,18 +1,23 @@
 import click
 
-from config import Config
-from custom_logging import logger
-from repository.project_repository.csv_project_repository import (
+from task_helper.config import Config
+from task_helper.custom_logging import logger
+from task_helper.repository.project_repository.csv_project_repository import (
     CSVProjectRepository,
 )
-from repository.project_repository.errors import ProjectExist, ProjectNotFound
-from repository.task_repository.errors import TaskNotFound
-from repository.task_repository.pivotal_task_repository import (
+from task_helper.repository.project_repository.errors import (
+    ProjectExist,
+    ProjectNotFound,
+)
+from task_helper.repository.task_repository.errors import TaskNotFound
+from task_helper.repository.task_repository.pivotal_task_repository import (
     PivotalTaskRepository,
 )
-from repository.vcs_repository.git_vcs_repository import GitVCSRepository
-from service.pivotal_vcs_service import PivotalVCSService
-from service.project_service import ProjectService
+from task_helper.repository.vcs_repository.git_vcs_repository import (
+    GitVCSRepository,
+)
+from task_helper.service.pivotal_vcs_service import PivotalVCSService
+from task_helper.service.project_service import ProjectService
 
 
 def main():

@@ -1,6 +1,7 @@
 import pandas as pd
-from model.project import Project
 from pandas.errors import EmptyDataError
+
+from task_helper.model.project import Project
 
 from .errors import InvalidCSVPath, ProjectEmpty, ProjectExist, ProjectNotFound
 

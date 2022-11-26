@@ -1,12 +1,13 @@
 from unittest.mock import Mock
 
 import pytest
-from model.project import Project
-from model.task.type import Task
-from repository.project_repository.type import ProjectRepositoryP
-from repository.task_repository.type import TaskRepository
-from repository.vcs_repository.type import VCSRepository
-from service.pivotal_vcs_service import PivotalVCSService
+
+from task_helper.model.project import Project
+from task_helper.model.task.type import Task
+from task_helper.repository.project_repository.type import ProjectRepositoryP
+from task_helper.repository.task_repository.type import TaskRepository
+from task_helper.repository.vcs_repository.type import VCSRepository
+from task_helper.service.pivotal_vcs_service import PivotalVCSService
 
 
 @pytest.fixture
