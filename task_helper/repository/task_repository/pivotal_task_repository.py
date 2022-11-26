@@ -1,8 +1,9 @@
 import requests
-from custom_logging import logger
-from model.task.pivotal_task import PivotalTask
-from repository.task_repository.errors import TaskNotFound
-from repository.task_repository.type import TaskRepository
+
+from task_helper.custom_logging import logger
+from task_helper.model.task.pivotal_task import PivotalTask
+from task_helper.repository.task_repository.errors import TaskNotFound
+from task_helper.repository.task_repository.type import TaskRepository
 
 
 class PivotalTaskRepository(TaskRepository):

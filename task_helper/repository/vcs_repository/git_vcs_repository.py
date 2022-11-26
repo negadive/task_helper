@@ -1,5 +1,6 @@
 import git
-from repository.vcs_repository.type import VCSRepository
+
+from task_helper.repository.vcs_repository.type import VCSRepository
 
 
 class GitVCSRepository(VCSRepository):

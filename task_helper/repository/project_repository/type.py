@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from model.project import Project
+from task_helper.model.project import Project
 
 
 class ProjectRepositoryP(Protocol):

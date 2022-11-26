@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from model.task.type import Task
+from task_helper.model.task.type import Task
 
 
 class TaskRepository(Protocol):

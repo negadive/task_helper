@@ -1,10 +1,11 @@
 import pandas as pd
 import pytest
-from model.project import Project
-from repository.project_repository.csv_project_repository import (
+
+from task_helper.model.project import Project
+from task_helper.repository.project_repository.csv_project_repository import (
     CSVProjectRepository,
 )
-from repository.project_repository.errors import InvalidCSVPath
+from task_helper.repository.project_repository.errors import InvalidCSVPath
 
 PROJECT_PATH = "./test_projects.csv"
 

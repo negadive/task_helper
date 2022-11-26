@@ -1,5 +1,5 @@
-from model.project import Project
-from repository.project_repository.type import ProjectRepositoryP
+from task_helper.model.project import Project
+from task_helper.repository.project_repository.type import ProjectRepositoryP
 
 
 class ProjectService:
